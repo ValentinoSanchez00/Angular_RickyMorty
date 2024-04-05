@@ -1,0 +1,43 @@
+<div class="container">
+    <form *ngIf="datos" ngSubmit="guardarDatos()">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" [value]="datos.name">
+          </div>
+          <div class="mb-3">
+            <label for="especie" class="form-label">Especie</label>
+            <input type="text" class="form-control" id="especie" [value]="datos.species">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="genero" class="form-label">Género</label>
+            <input type="text" class="form-control" id="genero" [value]="datos.gender" >
+          </div>
+          <div class="mb-3">
+            <label for="estatus" class="form-label">Estatus</label>
+            <input type="text" class="form-control" id="estatus" [value]="datos.status">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="origen" class="form-label">Origen</label>
+            <input type="text" class="form-control" id="origen" [value]="datos.origin.name">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="ubicacion" class="form-label">Ubicación Actual</label>
+            <input type="text" class="form-control" id="ubicacion" [value]="datos.location.name">
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-success m-3">Guardar</button>
+      <button class="btn btn-primary"  routerLink="/">Volver</button>
+    </form>
+  </div>
+  
